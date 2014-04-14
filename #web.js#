@@ -4,9 +4,11 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
- var buf  = fs.readFileSync('stanford_example.html');
+ var buf  = fs.readFileSync('example2.html');
  response.send(buf.toString());
 });
+
+
 
 var port = process.env.PORT || 3000;
 app.listen(port, function() {
